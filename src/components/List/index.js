@@ -1,7 +1,7 @@
 import React from "react";
 import { Container } from "./styles";
 import { MdAdd } from "react-icons/md";
-import Card from "../Card";
+import {Card} from "../Card";
 
 export default function List({ data, index: listIndex }) {
   return (

@@ -1,10 +1,10 @@
-import React, { useRef, useContext } from "react";
+import React, { useRef, useContext, memo  }from "react";
 import { Container, Label } from "./styles";
 import { useDrag, useDrop } from "react-dnd";
 
 import Boardcontext from "../Board/context";
 
-export default function Card({ data, index, listIndex }) {
+function CardItem({ data, index, listIndex }) {
   const ref = useRef();
   const { move } = useContext(Boardcontext);
 
@@ -60,3 +60,4 @@ export default function Card({ data, index, listIndex }) {
     </Container>
   );
 }
+export const Card = memo(CardItem)
